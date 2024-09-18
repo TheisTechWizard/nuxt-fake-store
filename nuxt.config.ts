@@ -9,5 +9,9 @@ export default defineNuxtConfig({
         {name : 'description', content: 'hobby project'}
       ]
     }
-  }
+  },
+  ssr: false, // Disable SSR if you want a fully static site
+  nitro: {
+    preset: 'static' // Nitro preset for static site generation
+  },
 })

@@ -1,5 +1,5 @@
 <template>
-    <div class="product-wrapper">
+    <div class="products-wrapper">
         <!-- For potential filter system -->
         <!-- <div class="filter-wrapper"></div> -->
         <div class="products-grid">

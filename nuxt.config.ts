@@ -14,5 +14,5 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'static' // Nitro preset for static site generation
   },
-  css: ['@/assets/scss/main.scss'],
+  css: ['@/assets/scss/_main.scss'],
 })

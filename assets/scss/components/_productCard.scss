@@ -1,0 +1,16 @@
+.product-card {
+    display: grid;
+    border: solid black;
+    width: 90%;
+    min-height: 420px;
+    justify-items: center;
+    align-items: center;
+
+    img {
+        max-height: 160px;
+    }
+
+    p {
+        text-align: center;
+    }
+}

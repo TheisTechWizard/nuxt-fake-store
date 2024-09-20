@@ -1,16 +1,34 @@
 .product-card {
     display: grid;
-    border: solid black;
     width: 90%;
     min-height: 420px;
     justify-items: center;
     align-items: center;
+    padding: 0px 15px;
+    border-radius: 10px;
+    box-shadow: 3px 7px 7px #888;
 
     img {
         max-height: 160px;
+        max-width: 140px;
     }
 
     p {
         text-align: center;
     }
+
+    a {
+        background-color: #A4E0CA;
+        color: black;
+        padding: 12px 35px;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: bold;
+    }
 }
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}

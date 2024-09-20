@@ -9,7 +9,7 @@
                 <h4>USD {{ product.price }}$</h4>
                 <p>{{ product.description }}</p>
                 <p>Category: {{ product.category }}</p>
-                <button @click="handleClick">Add to cart</button>
+                <button @click="addProductToCart(product)">Add to cart</button>
             </div>
         </div>
     </div>
@@ -17,9 +17,13 @@
 
 <script setup>
 const { product } = defineProps(['product'])
+import { useCart } from '@/composables/useCart';
 
-function handleClick() {
-    this.$emit('productToShoppingCart', product)
+const { addToCart } = useCart();
+
+function addProductToCart(product) {
+    addToCart(product)
+    alert(`${product.title} added to cart!`);
 }
 </script>
 

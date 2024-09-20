@@ -6,12 +6,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDUQ09555mknd3Vv752oTKqZSpfhadbK4M",
-  authDomain: "nuxt-fake-store.firebaseapp.com",
-  projectId: "nuxt-fake-store",
-  storageBucket: "nuxt-fake-store.appspot.com",
-  messagingSenderId: "805950989590",
-  appId: "1:805950989590:web:eef40f43bf4f490c249c37"
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_API_KEYAUTH_DOMAIN,
+  projectId: import.meta.env.VITE_API_KEYPROJECT_ID,
+  storageBucket: import.meta.env.VITE_API_KEYSTORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_API_KEYMESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_API_KEYAPP_ID
 };
 
 // Initialize Firebase

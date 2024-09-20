@@ -8,9 +8,9 @@
                 <ul>
                     <li><nuxt-link to="/products">Products</nuxt-link></li>
                 </ul>
-                <div class="shopping-cart">
+                <button class="shopping-cart">
                     <img src="/assets/icons/shopping-bag.png" alt="">
-                </div>
+                </button>
             </div>
         </nav>
     </header>

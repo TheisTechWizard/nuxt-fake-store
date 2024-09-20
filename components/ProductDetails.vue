@@ -19,7 +19,7 @@
 const { product } = defineProps(['product'])
 
 function handleClick() {
-
+    this.$emit('productToShoppingCart', product)
 }
 </script>
 

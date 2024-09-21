@@ -9,12 +9,21 @@
                 <h3>USD {{ product.price }}$</h3>
                 <p>Category: {{ product.category }}</p>
 
-                <label for="quantity">Quantity:</label>
-                <input v-model="quantity" type="number" min="1" />
+                <div class="quantity-wrapper">
+                    <label for="quantity">Quantity:</label>
+                    <div class="quantity-selector">
+                        <button @click="decreaseQuantity">-</button>
+                        <input v-model="quantity" min="1" />
+                        <button @click="quantity++">+</button>
+                    </div>
+                </div>
 
                 <button @click="addProductToCart(product)">Add to cart</button>
 
-                <p>{{ product.description }}</p>
+                <div class="description-accordion">
+                    <span>DESCRIPTION</span>
+                    <p>{{ product.description }}</p>
+                </div>
             </div>
         </div>
     </div>
@@ -33,6 +42,12 @@ function addProductToCart(product) {
     }
     //alert(`${quantity.value} x ${product.title} added to cart!`);
 }
+
+const decreaseQuantity = () => {
+    if (quantity.value > 1) {
+        quantity.value -= 1;
+    }
+};
 </script>
 
 <style lang="scss"></style>

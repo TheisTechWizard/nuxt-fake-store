@@ -3,7 +3,7 @@
     .product-details-card {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
         padding: 0 20px;
         align-items: center;
 
@@ -20,11 +20,46 @@
         .product-info {
             display: flex;
             flex-direction: column;
+            gap: 20px;
+
+            .quantity-wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                label {
+                    font-size: 17px;
+                    font-weight: 700;
+                }
+
+                .quantity-selector {
+                    display: flex;
+                    justify-content: space-between;
+                    background: #FCFCFD;
+                    border: solid 1px #EAECF0;
+                    min-height: 50px;
+                    max-width: 150px;
+
+                    button {
+                        background: none;
+                        color: #2A3439;
+                        padding: 0 10px;
+                        font-size: 24px;
+                    }
+
+                    input {
+                        text-align: center;
+                        border: none;
+                        background: none;
+                        max-width: 20px;
+                        font-size: 18px;
+                    }
+                }
+            }
 
             button {
                 background-color: #2A3439;
                 border: none;
-                border-radius: 5px;
                 color: white;
                 font-size: 16px;
                 font-weight: 700;
@@ -35,6 +70,12 @@
                     background-color: #00E0A8;
                     color: #2A3439;
                 }
+            }
+
+            .description-accordion {
+                border: solid 1px #2A3439;
+                border-radius: 12px;
+                padding: 20px;
             }
         }
     }

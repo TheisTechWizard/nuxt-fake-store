@@ -1,13 +1,15 @@
 .header-wrapper {
     border-bottom: solid 2px black;
     margin-bottom: 20px;
+    min-height: 5rem;
+    display: flex;
 
     .navigation-bar {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0px 20px;
-
+        width: 100%;
 
         .nav-left-side {}
 
@@ -20,9 +22,28 @@
                 background: none;
                 border: none;
                 cursor: pointer;
+                position: relative;
 
                 img {
                     max-height: 35px;
+                }
+
+                .cart-count {
+                    display: flex;
+                    position: absolute;
+                    top: 0;
+                    right: -8%;
+                    background-color: #00E0A8;
+                    border-radius: 50%;
+                    width: 19px;
+                    height: 19px;
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        font-size: 11px;
+                        font-weight: bold;
+                    }
                 }
             }
         }

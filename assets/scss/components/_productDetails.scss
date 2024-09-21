@@ -29,6 +29,12 @@
                 font-size: 16px;
                 font-weight: 700;
                 padding: 15px 30px;
+                transition: background-color 0.5s ease;
+
+                &:hover {
+                    background-color: #00E0A8;
+                    color: #2A3439;
+                }
             }
         }
     }
@@ -73,12 +79,7 @@
 
                 button {
                     cursor: pointer;
-                    transition: background-color 0.5s ease;
 
-                    &:hover {
-                        background-color: #00FFBF;
-                        color: #2A3439;
-                    }
                 }
             }
         }

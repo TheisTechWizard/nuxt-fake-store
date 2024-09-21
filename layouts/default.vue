@@ -8,12 +8,17 @@
                 <ul>
                     <li><nuxt-link to="/products">Products</nuxt-link></li>
                 </ul>
-                <button class="shopping-cart">
+                <button class="shopping-cart" @click="isSidebarVisible = !isSidebarVisible">
                     <img src="/assets/icons/shopping-bag.png" alt="">
+                    <div class="cart-count" v-if="cart.length > 0">
+                        <p>{{ cart.length }}</p>
+                    </div>
                 </button>
             </div>
         </nav>
     </header>
+
+    <ShoppingCartSideBar :visible="isSidebarVisible" @close="isSidebarVisible = false" />
 
     <div>
         <slot />
@@ -21,7 +26,11 @@
 </template>
 
 <script setup>
+import { useCart } from '@/composables/useCart';
 
+const { cart } = useCart();
+
+const isSidebarVisible = ref(false);
 </script>
 
 <style lang="scss"></style>

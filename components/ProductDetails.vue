@@ -21,8 +21,13 @@
                 <button @click="addProductToCart(product)">Add to cart</button>
 
                 <div class="description-accordion">
-                    <span>DESCRIPTION</span>
-                    <p>{{ product.description }}</p>
+                    <span @click="toggleAccordion" class="accordion-header">
+                        DESCRIPTION
+                        <span>^</span>
+                    </span>
+                    <transition name="accordion">
+                        <p v-if="isAccordionOpen">{{ product.description }}</p>
+                    </transition>
                 </div>
             </div>
         </div>
@@ -35,18 +40,22 @@ import { useCart } from '@/composables/useCart';
 
 const { addToCart } = useCart();
 const quantity = ref(1); // Default quantity 1
+const isAccordionOpen = ref(false);
 
 function addProductToCart(product) {
     for (let i = 0; i < quantity.value; i++) {
         addToCart(product);
     }
-    //alert(`${quantity.value} x ${product.title} added to cart!`);
 }
 
 const decreaseQuantity = () => {
     if (quantity.value > 1) {
         quantity.value -= 1;
     }
+};
+
+const toggleAccordion = () => {
+    isAccordionOpen.value = !isAccordionOpen.value;
 };
 </script>
 

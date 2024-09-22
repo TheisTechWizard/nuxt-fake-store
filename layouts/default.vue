@@ -24,6 +24,10 @@
     <div>
         <slot />
     </div>
+
+    <footer class="footer-wrapper">
+        footer TODO
+    </footer>
 </template>
 
 <script setup>

@@ -2,7 +2,11 @@
     <transition name="sidebar-slide">
         <div class="sidebar" v-if="visible">
             <div class="sidebar-head">
-                <h2>Shopping Cart - {{ cart.length }}</h2>
+                <div class="cart-size">
+                    <h2>Shopping Cart</h2>
+                    <img src="../assets/icons/dot.png" alt="">
+                    <h2>{{ cart.length }}</h2>
+                </div>
                 <button class="close-btn" @click="$emit('close')">X</button>
             </div>
             <ul class="shopping-cart-list">

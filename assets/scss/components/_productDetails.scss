@@ -42,6 +42,7 @@
 
                     button {
                         background: none;
+                        border: none;
                         color: #2A3439;
                         padding: 0 10px;
                         font-size: 24px;
@@ -59,7 +60,7 @@
 
             button {
                 background-color: #2A3439;
-                border: none;
+                border: solid #2A3439;
                 color: white;
                 font-size: 16px;
                 font-weight: 700;
@@ -68,7 +69,7 @@
 
                 &:hover {
                     background-color: #00E0A8;
-                    color: #2A3439;
+                    color: black;
                 }
             }
 

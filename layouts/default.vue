@@ -19,6 +19,7 @@
     </header>
 
     <ShoppingCartSideBar :visible="isSidebarVisible" @close="isSidebarVisible = false" />
+    <div v-if="isSidebarVisible" class="overlay"></div>
 
     <div>
         <slot />

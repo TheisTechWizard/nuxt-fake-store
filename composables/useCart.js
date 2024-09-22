@@ -30,13 +30,18 @@ export const useCart = () => {
         cart.value = cart.value.filter(item => item.id !== productId);
       }
     }
-
-    console.log(cart.value);
   };
+
+  const totalPrice = computed(() => {
+  const total = cart.value.reduce((total, item) => total + item.price * item.quantity, 0);
+  // toFixed() gør at kun et fikst antal vises efter komma
+  return total.toFixed(2); 
+});
 
   return {
     cart,
     addToCart,
     removeFromCart,
+    totalPrice,
   };
 };

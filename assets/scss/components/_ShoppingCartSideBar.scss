@@ -16,25 +16,27 @@
         padding: 25px 0px;
         justify-content: space-around;
         width: 100%;
-        border-bottom: solid 1px;
+        border-bottom: solid 1px rgb(218, 218, 218);
         gap: 25%;
     }
 
     .shopping-cart-list {
-        padding: 15px;
+        padding: 0;
 
         .shopping-cart-item {
             display: flex;
             flex-direction: row;
             gap: 20px;
             min-height: 100px;
+            border-bottom: solid 1px rgb(218, 218, 218);
+            padding: 15px;
 
             .image-wrapper {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                min-width: 90px;
-                height: 90px;
+                min-width: 80px;
+                height: 80px;
 
                 img {
                     max-height: 75%;
@@ -53,11 +55,15 @@
                 }
 
                 .quantity-price-wrapper {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
                     .quantity-selector {
                         max-width: 110px;
                         min-height: 30px;
                         display: flex;
-                        border: solid 1px rgb(199, 199, 199);
+                        border: solid 1px rgb(218, 218, 218);
 
                         input {
                             text-align: center;
@@ -66,8 +72,8 @@
                             font-size: 13px;
                             min-height: 100%;
                             border: none;
-                            border-left: solid 1px rgb(199, 199, 199);
-                            border-right: solid 1px rgb(199, 199, 199);
+                            border-left: solid 1px rgb(218, 218, 218);
+                            border-right: solid 1px rgb(218, 218, 218);
                         }
 
                         button {
@@ -82,6 +88,12 @@
 
             }
         }
+    }
+
+    .to-checkout-link {
+        background-color: #2A3439;
+        color: white;
+        padding: 15px 50px;
     }
 }
 

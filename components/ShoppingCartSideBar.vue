@@ -25,14 +25,12 @@
                                 {{ item.price }}$
                             </p>
                         </div>
-
-
-
                     </div>
-
                 </li>
             </ul>
             <h2 v-if="cart.length == 0">Your cart is empty</h2>
+            <nuxt-link v-if="cart.length > 0" class="to-checkout-link" to="/">GO TO CHECKOUT - {{ totalPrice
+                }}$</nuxt-link>
         </div>
     </transition>
 </template>
@@ -41,7 +39,7 @@
 import { useCart } from '@/composables/useCart';
 
 const { visible } = defineProps(['visible'])
-const { cart, removeFromCart, addToCart } = useCart();
+const { cart, removeFromCart, addToCart, totalPrice } = useCart();
 </script>
 
 <style lang="scss"></style>

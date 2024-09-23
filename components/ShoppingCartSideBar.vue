@@ -5,7 +5,7 @@
                 <div class="cart-size">
                     <h2>Shopping Cart</h2>
                     <img src="../assets/icons/dot.png" alt="">
-                    <h2>{{ cart.length }}</h2>
+                    <h2>{{ totalCartItems }}</h2>
                 </div>
                 <button class="close-btn" @click="$emit('close')">X</button>
             </div>
@@ -43,7 +43,7 @@
 import { useCart } from '@/composables/useCart';
 
 const { visible } = defineProps(['visible'])
-const { cart, removeFromCart, addToCart, totalPrice } = useCart();
+const { cart, removeFromCart, addToCart, totalPrice, totalCartItems } = useCart();
 </script>
 
 <style lang="scss"></style>

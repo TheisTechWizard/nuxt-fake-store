@@ -11,7 +11,8 @@
                 <button class="shopping-cart" @click="isSidebarVisible = !isSidebarVisible">
                     <img src="/assets/icons/shopping-bag.png" alt="">
                     <div class="cart-count" v-if="cart.length > 0">
-                        <p>{{ cart.length }}</p>
+                        <!-- <p>{{ cart.length }}</p> -->
+                        <p>{{ totalCartItems }}</p>
                     </div>
                 </button>
             </div>
@@ -33,7 +34,7 @@
 <script setup>
 import { useCart } from '@/composables/useCart';
 
-const { cart } = useCart();
+const { cart, totalCartItems } = useCart();
 
 const isSidebarVisible = ref(false);
 </script>

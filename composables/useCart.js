@@ -21,10 +21,10 @@ export const useCart = () => {
 
     if (existingProduct) {
       if (existingProduct.quantity > 1) {
-        // If more than one, decrease the quantity
+        
         existingProduct.quantity -= 1;
+
       } else {
-        // If only one left, remove the product from the cart
         cart.value = cart.value.filter(item => item.id !== productId);
       }
     }
@@ -34,12 +34,18 @@ export const useCart = () => {
   const total = cart.value.reduce((total, item) => total + item.price * item.quantity, 0);
   // toFixed() gør at kun et fikst antal vises efter komma
   return total.toFixed(2); 
-});
+  });
+
+ const totalCartItems = computed(() => {
+    return cart.value.reduce((sum, item) => sum + item.quantity, 0);
+  });
+
 
   return {
     cart,
     addToCart,
     removeFromCart,
     totalPrice,
+    totalCartItems,
   };
 };

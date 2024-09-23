@@ -3,12 +3,10 @@ export const useCart = () => {
   // cart state
   const cart = useState('cart', () => []); // Initialize cart as an empty array
 
-  // Function to add a product to the cart
   const addToCart = (product) => {
     const existingProduct = cart.value.find(item => item.id === product.id);
 
     if (existingProduct) {
-      // If product exists, increase the quantity
       existingProduct.quantity += 1;
     } else {
       // If product doesn't exist, add it with quantity = 1

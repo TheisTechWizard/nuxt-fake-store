@@ -24,4 +24,4 @@ logs
 !.env.example
 
 # Firebase
-.firebase
+/firebase/

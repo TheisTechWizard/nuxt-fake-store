@@ -8,10 +8,9 @@
                 <ul>
                     <li><nuxt-link to="/products">Products</nuxt-link></li>
                 </ul>
-                <button class="shopping-cart" @click="isSidebarVisible = !isSidebarVisible">
+                <button class="shopping-cart" @click="toggleSideBar">
                     <img src="/assets/icons/shopping-bag.png" alt="">
                     <div class="cart-count" v-if="cart.length > 0">
-                        <!-- <p>{{ cart.length }}</p> -->
                         <p>{{ totalCartItems }}</p>
                     </div>
                 </button>
@@ -19,7 +18,7 @@
         </nav>
     </header>
 
-    <ShoppingCartSideBar :visible="isSidebarVisible" @close="isSidebarVisible = false" />
+    <ShoppingCartSideBar :visible="isSidebarVisible" @close="closeSidebar" />
     <div v-if="isSidebarVisible" class="overlay"></div>
 
     <div>
@@ -37,6 +36,25 @@ import { useCart } from '@/composables/useCart';
 const { cart, totalCartItems } = useCart();
 
 const isSidebarVisible = ref(false);
+
+const toggleSideBar = () => {
+    isSidebarVisible.value = !isSidebarVisible.value;
+    toggleBodyScroll(isSidebarVisible.value);
+}
+
+const closeSidebar = () => {
+    isSidebarVisible.value = false;
+    toggleBodyScroll(false);
+}
+
+const toggleBodyScroll = (disableScroll) => {
+    const body = document.body;
+    if (disableScroll) {
+        body.classList.add("no-scroll");
+    } else {
+        body.classList.remove('no-scroll');
+    }
+}
 </script>
 
 <style lang="scss"></style>

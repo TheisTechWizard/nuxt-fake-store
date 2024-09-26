@@ -6,7 +6,10 @@
                 <img src="/assets/icons/shopping-bag.png" alt="">
             </button>
         </div>
-        <h4>{{ product.title }}</h4>
+        <div class="info-wrapper">
+            <h4>{{ product.title }}</h4>
+            <p>${{ product.price }}</p>
+        </div>
         <nuxt-link :to="`/products/${product.id}`">View Details</nuxt-link>
         <!-- TODO add quick buy button -->
         <!-- <transition name="quick-buy">

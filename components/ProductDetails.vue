@@ -6,7 +6,7 @@
             </div>
             <div class="product-info">
                 <h2>{{ product.title }}</h2>
-                <h3>USD {{ product.price }}$</h3>
+                <h3>${{ product.price }}</h3>
                 <p>Category: {{ product.category }}</p>
                 <div class="quantity-wrapper">
                     <label for="quantity">Quantity:</label>

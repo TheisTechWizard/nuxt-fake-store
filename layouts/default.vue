@@ -26,9 +26,9 @@
         <slot />
     </div>
 
-    <footer class="footer-wrapper">
+    <!-- <footer class="footer-wrapper">
         footer TODO
-    </footer>
+    </footer> -->
 </template>
 
 <script setup>

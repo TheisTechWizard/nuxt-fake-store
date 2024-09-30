@@ -17,6 +17,13 @@
             display: flex;
             align-items: center;
             gap: 30px;
+            //width: 35%;
+
+            .navigation-links {
+                // width: 100%;
+                // display: flex;
+                // justify-content: space-between;
+            }
 
             .shopping-cart {
                 background: none;

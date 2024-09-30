@@ -5,8 +5,12 @@
                 <h2>Fake store!</h2>
             </div>
             <div class="nav-right-side">
-                <ul>
-                    <li><nuxt-link to="/products">Products</nuxt-link></li>
+                <ul class="navigation-links">
+                    <nuxt-link to="/products">Products</nuxt-link>
+                    <!-- <nuxt-link v-for="category in uniqueCategories" :key="category"
+                        :to="{ path: '/products', query: { category } }">
+                        {{ category }}
+                    </nuxt-link> -->
                 </ul>
                 <button class="shopping-cart" @click="toggleSideBar">
                     <img src="/assets/icons/shopping-bag.png" alt="">
@@ -32,8 +36,10 @@
 
 <script setup>
 import { useCart } from '@/composables/useCart';
+import { useProducts } from '@/composables/useProducts';
 
 const { cart, totalCartItems } = useCart();
+const { uniqueCategories } = useProducts();
 
 const isSidebarVisible = ref(false);
 

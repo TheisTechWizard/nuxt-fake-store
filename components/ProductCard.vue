@@ -1,16 +1,19 @@
 <template>
     <div class="product-card">
         <div class="image-wrapper">
-            <img :src="product.image" alt="product thumb">
+            <nuxt-link :to="`/products/${product.id}`">
+                <img class="product-thumb" :src="product.image" alt="product thumb">
+            </nuxt-link>
             <button @click="addToCart(product)" class="quick-buy-btn">
                 <img src="/assets/icons/shopping-bag.png" alt="">
             </button>
         </div>
         <div class="info-wrapper">
-            <h4>{{ product.title }}</h4>
+            <nuxt-link :to="`/products/${product.id}`">
+                <h4>{{ product.title }}</h4>
+            </nuxt-link>
             <p>${{ product.price }}</p>
         </div>
-        <nuxt-link :to="`/products/${product.id}`">View Details</nuxt-link>
         <!-- TODO add quick buy button -->
         <!-- <transition name="quick-buy">
             <button @click="addToCart(product)" class="quick-buy-btn">

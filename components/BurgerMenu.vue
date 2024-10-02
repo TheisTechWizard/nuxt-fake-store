@@ -1,17 +1,18 @@
 <template>
     <transition name="burger-menu-slide">
-
+        <div class="burger-menu-container" v-if="visible">
+            <div class="close-icon-wrapper">
+                <button class="close-icon" @click="$emit('close')">X</button>
+            </div>
+            <ul class="menu" @click="$emit('close')">
+                <nuxt-link to="/products">Products</nuxt-link>
+                <nuxt-link v-for="category in uniqueCategories" :key="category"
+                    :to="{ path: '/products', query: { category } }">
+                    {{ category }}
+                </nuxt-link>
+            </ul>
+        </div>
     </transition>
-    <div class="burger-menu-container" v-if="visible">
-        <button class="close-icon" @click="$emit('close')">X</button>
-        <ul class="menu">
-            <nuxt-link to="/products">Products</nuxt-link>
-            <nuxt-link v-for="category in uniqueCategories" :key="category"
-                :to="{ path: '/products', query: { category } }">
-                {{ category }}
-            </nuxt-link>
-        </ul>
-    </div>
 </template>
 
 <script setup>

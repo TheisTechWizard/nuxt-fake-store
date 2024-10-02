@@ -75,6 +75,27 @@
     background-color: #2A3439;
 }
 
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {
+    .header-wrapper {
+
+
+        .navigation-bar {
+
+
+            .nav-left-side {
+
+                .burger-menu-icon {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {}
+
 .overlay {
     position: fixed;
     top: 0;

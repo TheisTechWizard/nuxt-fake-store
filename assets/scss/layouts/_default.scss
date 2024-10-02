@@ -11,7 +11,19 @@
         padding: 0px 20px;
         width: 100%;
 
-        .nav-left-side {}
+        .nav-left-side {
+
+            .burger-menu-icon {
+                background: none;
+                border: none;
+                cursor: pointer;
+                position: relative;
+
+                img {
+                    max-height: 35px;
+                }
+            }
+        }
 
         .nav-right-side {
             display: flex;

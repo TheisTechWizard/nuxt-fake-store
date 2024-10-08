@@ -35,6 +35,7 @@
                 // width: 100%;
                 // display: flex;
                 // justify-content: space-between;
+                display: none;
             }
 
             .shopping-cart {
@@ -88,6 +89,15 @@
 
                 .burger-menu-icon {
                     display: none;
+                }
+            }
+
+            .nav-right-side {
+
+                .navigation-links {
+                    // width: 100%;
+                    display: flex;
+                    // justify-content: space-between;
                 }
             }
         }

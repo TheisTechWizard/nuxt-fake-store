@@ -48,22 +48,23 @@ watch(() => route.query.category, (newCategory) => {
 });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .filter-wrapper {
     margin-bottom: 20px;
     text-align: center;
-}
 
-button {
-    margin: 5px;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    cursor: pointer;
-}
+    button {
+        margin: 5px;
+        padding: 10px;
+        background-color: #f0f0f0;
+        cursor: pointer;
+        border-radius: 6px;
+        border: none;
+    }
 
-button.active {
-    background-color: #4caf50;
-    color: white;
+    button.active {
+        background-color: #252D9B;
+        color: white;
+    }
 }
 </style>

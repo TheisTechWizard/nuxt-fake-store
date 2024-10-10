@@ -92,9 +92,16 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    font-size: 18px;
+                    font-size: 20px;
 
-                    span {}
+                    .chevron {
+                        transition: transform 0.3s ease;
+                        width: 20px;
+                    }
+
+                    .chevron-open {
+                        transform: rotate(180deg);
+                    }
                 }
 
                 p {

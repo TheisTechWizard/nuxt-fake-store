@@ -2,7 +2,7 @@
     position: relative;
     display: grid;
     width: 80%;
-    min-height: 300px;
+    min-height: 275px;
     justify-items: center;
     align-items: center;
     padding: 5px 15px;
@@ -51,6 +51,8 @@
 
         h4 {
             font-size: 14px;
+            max-height: 50px;
+            overflow: hidden;
         }
 
         p {

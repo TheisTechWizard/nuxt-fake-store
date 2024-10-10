@@ -4,7 +4,9 @@
             <div class="sidebar-head">
                 <div class="cart-size">
                     <h2>Shopping Cart</h2>
-                    <img src="../assets/icons/dot.png" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
+                        <path fill="black" d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10s10-4.486 10-10S17.514 2 12 2" />
+                    </svg>
                     <h2>{{ totalCartItems }}</h2>
                 </div>
                 <button class="close-btn" @click="$emit('close')">X</button>

@@ -20,10 +20,11 @@
                 <button @click="addProductToCart(product)">Add to cart</button>
 
                 <div class="description-accordion">
-                    <span @click="toggleAccordion" class="accordion-header">
-                        DESCRIPTION
-                        <span>^</span>
-                    </span>
+                    <div @click="toggleAccordion" class="accordion-header">
+                        <span>DESCRIPTION</span>
+                        <img src="/assets/icons/ChevronDown.svg" alt="accordion chevron"
+                            :class="{ 'chevron-open': isAccordionOpen }" class="chevron">
+                    </div>
                     <transition name="accordion">
                         <p v-if="isAccordionOpen">{{ product.description }}</p>
                     </transition>

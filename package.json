@@ -12,8 +12,10 @@
   "dependencies": {
     "@nuxt/typescript-runtime": "^3.0.2",
     "@pinia/nuxt": "^0.5.4",
+    "@stripe/stripe-js": "^4.8.0",
     "firebase": "^10.13.1",
     "nuxt": "^3.13.2",
+    "stripe": "^17.2.0",
     "vue": "latest",
     "vue-router": "latest"
   },

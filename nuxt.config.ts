@@ -20,4 +20,10 @@ export default defineNuxtConfig({
   },
 
   css: ['@/assets/scss/_main.scss'],
+
+  runtimeConfig: {
+    public: {
+      stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
+    }
+  }
 })

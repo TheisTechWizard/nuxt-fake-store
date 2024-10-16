@@ -38,9 +38,11 @@
                     </li>
                 </ul>
                 <div class="checkout-container">
-                    <nuxt-link v-if="cart.length > 0" class="to-checkout-link" to="/checkout">
-                        GO TO CHECKOUT - {{ totalPrice }}$
-                    </nuxt-link>
+                    <div @click="$emit('close')">
+                        <nuxt-link v-if="cart.length > 0" class="to-checkout-link" to="/checkout">
+                            GO TO CHECKOUT - {{ totalPrice }}$
+                        </nuxt-link>
+                    </div>
                     <div @click="$emit('close')">
                         <nuxt-link v-if="cart.length > 0" to="/products/">Continue shopping</nuxt-link>
                     </div>

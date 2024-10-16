@@ -1,21 +1,20 @@
 import Stripe from "stripe";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+const stripe = new Stripe(import.meta.env.STRIPE_SECRET_KEY);
 
 
-export default async (req, res) => {
-    const { amount } = req.body;
+export default defineEventHandler(async (event) => {
+  const body = await readBody(event); // Get the request body
+  const { amount } = body;
 
-    try {
-        const paymentIntent = await stripe.paymentIntents.create({
-            amount, // Amount in cents
-            currency: 'usd' // Can be changed to other currencies like dkk if needed
-        });
+  try {
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount: amount,
+      currency: 'usd',
+    });
 
-        res.status(200).json({
-            clientSecret: paymentIntent.client_secret,
-        })
-    } catch (error) {
-        res.status(500).json({ error: error.message })
-    }
-}
+    return { clientSecret: paymentIntent.client_secret };
+  } catch (error) {
+    return { error: error.message };
+  }
+});

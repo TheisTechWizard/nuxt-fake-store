@@ -31,9 +31,9 @@ export const useCart = () => {
   };
 
   const totalPrice = computed(() => {
-  const total = cart.value.reduce((total, item) => total + item.price * item.quantity, 0);
-  // toFixed() gør at kun et fikst antal vises efter komma
-  return total.toFixed(2); 
+    const total = cart.value.reduce((total, item) => total + item.price * item.quantity, 0);
+    // toFixed() gør at kun et fikst antal vises efter komma
+    return total.toFixed(2); 
   });
 
  const totalCartItems = computed(() => {
